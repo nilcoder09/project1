@@ -1,0 +1,20 @@
+/* default style */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'poppins', sans-serif;
+}
+.container{
+    width:100%;
+    min-height: 100vh;
+    background: linear-gradient(105deg, blue, yellow);
+    padding: 10px;
+
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540%;
+
+}
