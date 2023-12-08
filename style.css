@@ -8,7 +8,7 @@
 .container{
     width:100%;
     min-height: 100vh;
-    background: linear-gradient(105deg, blue, yellow);
+    background: linear-gradient(105deg, rgb(0, 0, 110), rgb(245, 255, 63));
     padding: 10px;
 
 }
@@ -16,7 +16,7 @@
 .todo-app{
     width: 100%;
     max-width: 540px;
-    background-color: darkkhaki;
+    background-color: rgb(255, 255, 255);
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
@@ -28,7 +28,7 @@
 }
 
 .todo-app h2{
-    color: rgb(0, 0, 0);
+    color: rgb(0, 50, 82);
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -38,9 +38,9 @@
 
 .row{
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: space-between;
-    background: skyblue;
+    background: rgb(255, 255, 255);
     border-radius: 25px;
     padding-left: 20px;
     margin-bottom: 25px;
@@ -48,7 +48,8 @@
 
 .row input{
     flex: 1;
-    border: none;
+    border-color: black;
+    border-radius: 40px;
     outline: none;
     background: transparent;
     padding: 10px;
@@ -56,15 +57,15 @@
 
 button{
     border-radius: 100px;
-    background-color: aliceblue;
+    background-color: rgb(0, 255, 255);
     color: black;
-    padding: 20px 30px;
+    padding: 12px 20px;
     text-align: center;
     cursor: pointer;
     
 }
 button:hover{
-    background-color: aqua;
+    background-color: rgb(238, 255, 0);
 
 }
 
@@ -75,6 +76,7 @@ ul li{
     user-select: none;
     cursor: pointer;
     position: relative;
+    border-radius: 40px;
 }
 
 ul li::before{
@@ -83,9 +85,37 @@ ul li::before{
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url("");
+    background-image: url("unchecked.aspx.jpeg");
     background-size: cover;
     background-position: center;
-    top: 12px;
+    top: 8px;
     left: 8px;
+}
+
+ul li.checked{
+    color:rgb(0, 30, 255);
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url("checked.jpg");
+
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top:5px;
+    width: 40px;
+    height:40px;
+    font-size: 22px;
+    color:#555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    color:rgb(0, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
